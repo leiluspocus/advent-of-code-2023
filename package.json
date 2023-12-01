@@ -1,7 +1,6 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "jest --watchAll",
     "test": "jest"
   },
   "dependencies": {

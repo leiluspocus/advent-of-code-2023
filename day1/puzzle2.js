@@ -35,18 +35,25 @@ const transformLettersToDigits = (inputString) => {
     'g'
   )
   let matches = [...inputString.matchAll(regexPattern)]
+  let i = 0
+
+  // Trick to handle overlapping cases
+  // We replace oneight with oneeight for example ^^'
   for (const item of matches) {
-    let i = 0
     if (matches[i + 1]) {
-      if (item[i].length + item[i].index > matches[i + 1][1].index) {
-        // Overlapping case - We add a trick to replace oneight with oneeight 😅
-        inputString = inputString.replace(
+      if (item[1].length + item.index > matches[i + 1].index) {
+        inputString = inputString.replaceAll(
           matches[i + 1][1],
           item[1].slice(-1) + matches[i + 1][1]
         )
       }
     }
-    inputString = inputString.replace(regexPattern, LETTERS_TO_DIGITS[item[1]])
+    i = i + 1
+  }
+
+  // Actually replace letters with digits
+  for (const digit of Object.entries(LETTERS_TO_DIGITS)) {
+    inputString = inputString.replaceAll(digit[0], digit[1])
   }
 
   return inputString

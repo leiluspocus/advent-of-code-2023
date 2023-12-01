@@ -24,6 +24,9 @@ test('line where there is no digit to replace', () => {
 test('edge cases f*** zoneight 💩', () => {
   expect(resolveLine('zoneight234')).toBe(14)
   expect(resolveLine('zoneight')).toBe(18)
+  expect(
+    resolveLine('eightbpsqrkzhqbhjlrxmzsixvvmgtrseventwo7oneightjbx')
+  ).toBe(88)
 })
 
 test('puzzleEnonce', () => {
