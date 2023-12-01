@@ -1,4 +1,4 @@
-const extractCalibrationValue = require('./puzzle1')
+const { extractCalibrationValue, resolvePuzzle1 } = require('./puzzle1')
 
 test('first easy case', () => {
   expect(extractCalibrationValue('1abc2')).toBe(12)
@@ -14,4 +14,12 @@ test('multiple digits in string', () => {
 
 test('one digit case', () => {
   expect(extractCalibrationValue('treb7uchet')).toBe(77)
+})
+
+test('lastcase', () => {
+  expect(extractCalibrationValue('6three2sixsix9eightfour')).toBe(69)
+})
+
+test('one puzzle', () => {
+  expect(resolvePuzzle1()).toBe(55538)
 })
