@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "jest --watchAll",
+    "test": "jest"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
