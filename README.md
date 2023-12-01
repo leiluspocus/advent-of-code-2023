@@ -13,3 +13,4 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - My way to handle puzzle 2 was to sanitize the overlapping characters first, then replace the occurences.
 - 💜 `replaceAll`
 - 💡 TIL: Read the text carefully and in your communities you shall trust! (So much love for you Sara 💜)
+- 🤖 [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day1)
