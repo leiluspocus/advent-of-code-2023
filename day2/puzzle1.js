@@ -7,7 +7,7 @@ const extractGameID = (gameLine) => {
 }
 
 const removeGameInfos = (gameLine) => {
-  const removeGameInfosRegExp = new RegExp('Game\\s\\d:\\s+', 'gm')
+  const removeGameInfosRegExp = new RegExp('Game\\s\\d*:\\s+', 'gm')
   return gameLine.replace(removeGameInfosRegExp, '')
 }
 

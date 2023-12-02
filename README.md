@@ -14,3 +14,12 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - 💜 `replaceAll`
 - 💡 TIL: Read the text carefully and in your communities you shall trust! (So much love for you Sara 💜)
 - 🤖 [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day1)
+
+!(Meme found on Reddit)[https://preview.redd.it/2023-day-1-did-not-see-this-coming-v0-5m7cnre6ht3c1.jpg?auto=webp&s=2db4ce0c1f64181bd85c1a74c420cce2d321f1c7]
+
+## Day 2
+- This time, I stick to the case given in the website and... it's done in 30mn! 🥳
+- I approach things little by little: I used Regex101 to help me figuring out the regex to extract my game ID, how to construct my colors object ... Baby steps encouraged by TDD are not my strongest asset ...
+- I'm thinking about having a helper file for functions that are used by several days (it's likely i'll have to read in a file everyday this month...)
+- Approaching this in a TDD way **definitely** helps !
+- I got stuck on an error on my Regexp that was not isolating the game ID properly ... (see this commit to handle game IDs that are on 2/3 digits) That was a tricky one!
