@@ -15,11 +15,16 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - 💡 TIL: Read the text carefully and in your communities you shall trust! (So much love for you Sara 💜)
 - 🤖 [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day1)
 
-!(Meme found on Reddit)[https://preview.redd.it/2023-day-1-did-not-see-this-coming-v0-5m7cnre6ht3c1.jpg?auto=webp&s=2db4ce0c1f64181bd85c1a74c420cce2d321f1c7]
+<img width="645" alt="Meme found on Reddit, joking on how complex oneight case was" src="https://github.com/leiluspocus/advent-of-code-2023/assets/1473845/d19c69f0-d574-4f56-addc-c98e410de335">
+
+[Source: Reddit](https://www.reddit.com/r/adventofcode/comments/188wjj8/2023_day_1_did_not_see_this_coming/)
+
+
 
 ## Day 2
 - This time, I stick to the case given in the website and... it's done in 30mn! 🥳
-- I approach things little by little: I used Regex101 to help me figuring out the regex to extract my game ID, how to construct my colors object ... Baby steps encouraged by TDD are not my strongest asset ...
+- I approach things little by little: I used [Regex101](https://regex101.com/r/hDYqxN/1) to help me figuring out the regex to extract my game ID, how to construct my colors object ... Baby steps encouraged by TDD are not my strongest asset ...
 - I'm thinking about having a helper file for functions that are used by several days (it's likely i'll have to read in a file everyday this month...)
-- Approaching this in a TDD way **definitely** helps !
+- 💜 Approaching this in a TDD way **definitely** helps !
 - I got stuck on an error on my Regexp that was not isolating the game ID properly ... (see this commit to handle game IDs that are on 2/3 digits) That was a tricky one!
+- [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day2)https://github.com/leiluspocus/advent-of-code-2023/tree/main/day2
