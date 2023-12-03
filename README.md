@@ -27,9 +27,9 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - I'm thinking about having a helper file for functions that are used by several days (it's likely i'll have to read in a file everyday this month...)
 - 💜 Approaching this in a TDD way **definitely** helps !
 - I got stuck on an error on my Regexp that was not isolating the game ID properly ... (see this commit to handle game IDs that are on 2/3 digits) That was a tricky one!
-- [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day2)https://github.com/leiluspocus/advent-of-code-2023/tree/main/day2
-
+- [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day2)
 
 ## Day 3
 - It was super hard!
 - I first handled only characters that were specified in the example.
+- 🤖 [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day3)
