@@ -38,3 +38,10 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 ## Day 4
 - It was smooth compared to Day 3.
 - I had to read the description multiple times concerning how the points were distributed...
+- I had trouble understanding the description, I decided to skip part 2.
+
+## Day 5
+- Not enough time to understand it for now.
+
+## Day 6
+- Part 1 was extremely smooth ! 🥹
