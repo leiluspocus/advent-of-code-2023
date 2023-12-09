@@ -75,7 +75,6 @@ const resolvePuzzle = (filePath) => {
     }
     i++
   }
-  console.log(elligibleNumbers)
   return sum(elligibleNumbers)
 }
 module.exports = { resolvePuzzle }

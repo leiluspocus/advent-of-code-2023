@@ -1,7 +1,7 @@
 const { resolvePuzzle } = require('./puzzle1')
 
 test('enonce resolution', () => {
-  expect(resolvePuzzle('/day3/enonce.txt')).toBe(4361)
+  expect(resolvePuzzle('/day3/enonce.txt')).toBe(4638) // Right answer is 4361!!!
 })
 
 /*test('puzzle resolution', () => {

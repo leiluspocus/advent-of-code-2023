@@ -31,5 +31,10 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 
 ## Day 3
 - It was super hard!
-- I first handled only characters that were specified in the example.
+- I first handled only characters that were specified in the example. But I didn't commit it ...
+- I dropped this day ! 🚪
 - 🤖 [Access the code](https://github.com/leiluspocus/advent-of-code-2023/tree/main/day3)
+
+## Day 4
+- It was smooth compared to Day 3.
+- I had to read the description multiple times concerning how the points were distributed...
