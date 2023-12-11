@@ -45,3 +45,13 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 
 ## Day 6
 - Part 1 was extremely smooth ! 🥹
+
+## Day 11
+- I built the matrix containing the universes
+- 💡 The method `every` ([MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every))
+- I had my matrix but I was having a hard time picturing how I would implement the path resolution. After browsing Reddit, I got [inspired by someone who was calculating distance](https://www.reddit.com/r/adventofcode/comments/18fmrjk/comment/kcvnsna/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) thanks to the position of the galaxy (it's called [Manhattan distance](https://fr.wikipedia.org/wiki/Distance_de_Manhattan) btw)
+- I decided to measure my time resolving advent of code: I don't want to spent more than 2 hours on these puzzles. The part 1 took me 1h45, so I won't be doing part 2 !
+- Even if I'm not doing all days, I decided to do only days that inspire me to write something "clean" and to write something in this daily log (well, at least understandable ^^' ) 🧽
+- I noticed that I was having less pleasure the past days and I was not taking time to write down my impressions about the day.
+- Hopefully, I'll be faster next year 🎢
+

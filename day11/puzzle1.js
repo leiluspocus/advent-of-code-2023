@@ -1,15 +1,10 @@
 const { readFile } = require('../helpers/file')
+const { sum } = require('../helpers/math')
 
 const getColumn = (arr, n) => arr.map((c) => c[n])
 
 const hasNoGalaxies = (column) => {
-  let empty = true
-  for (let i = 0; i < column.length; i++) {
-    if (column[i] !== '.') {
-      empty = false
-    }
-  }
-  return empty
+  return column.every((element) => element === '.')
 }
 
 const expandUniverse = (fileInput) => {
@@ -44,7 +39,6 @@ const expandUniverse = (fileInput) => {
     matrice.splice(emptyLineIds[i] + i, 0, newLine)
   }
   for (let i = 0; i < emptyColumnIds.length; i++) {
-    const newLine = []
     for (let k = 0; k < matrice.length; k++) {
       matrice[k].splice(emptyColumnIds[i] + i, 0, '.')
     }
@@ -52,8 +46,44 @@ const expandUniverse = (fileInput) => {
   return matrice
 }
 
-const resolvePuzzle = (input) => {
-  return 42
+const getGalaxiesLocations = (galaxies) => {
+  let galaxiesLocations = []
+  for (let i = 0; i < galaxies.length; i++) {
+    for (let j = 0; j < galaxies[0].length; j++) {
+      if (galaxies[i][j] === '#') {
+        galaxiesLocations.push([i, j])
+      }
+    }
+  }
+  return galaxiesLocations
 }
 
-module.exports = { hasNoGalaxies, resolvePuzzle, expandUniverse }
+const resolvePuzzle = (input) => {
+  // Calculer l'univers étendu
+  const expandedUniverse = expandUniverse(input)
+
+  // Calculer les localisations de chaque galaxie dans la matrice
+  const locations = getGalaxiesLocations(expandedUniverse)
+
+  // Calculer les distances entre les galaxies
+  let distances = []
+  for (let i = 0; i < locations.length; i++) {
+    for (let j = i + 1; j < locations.length; j++) {
+      let [galaxyX, galaxyY] = locations[i]
+      let [otherGalaxyX, otherGalaxyY] = locations[j]
+      distances.push(
+        Math.abs(
+          Math.abs(otherGalaxyX - galaxyX) + Math.abs(otherGalaxyY - galaxyY)
+        )
+      )
+    }
+  }
+  return sum(distances)
+}
+
+module.exports = {
+  hasNoGalaxies,
+  resolvePuzzle,
+  expandUniverse,
+  getGalaxiesLocations,
+}
