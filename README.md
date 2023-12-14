@@ -55,3 +55,6 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - I noticed that I was having less pleasure the past days and I was not taking time to write down my impressions about the day.
 - Hopefully, I'll be faster next year 🎢
 
+## Day 14
+- Understanding the description is hard ... again.
+- I decide to start with the first "tilt" part of rocks (make rocks go all the way north!)
