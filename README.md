@@ -58,3 +58,11 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 ## Day 14
 - Understanding the description is hard ... again.
 - I decide to start with the first "tilt" part of rocks (make rocks go all the way north!)
+
+## Day 15
+- First step was very straightforward to implement ... which freaks me out for part two ^^'
+- Since the other days don't inspire me, I decide to keep going !
+- [This article](https://dev.to/nickymeuleman/advent-of-code-2023-day-15-4h7c) helped me understand what was expected
+## Lessons learned
+- This advent of code was a great way to refresh my data structure knowledge (matrices, graph exploration), I'm definitely rusty.
+-
