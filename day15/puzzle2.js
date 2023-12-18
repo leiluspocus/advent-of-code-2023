@@ -25,31 +25,24 @@ const buildLensesBox = (str) => {
   for (const element of arr) {
     const label = extractLabel(element)
     if (element.includes('=')) {
-      let found = false
       const futureIndexOfElement = runHashAlgorithm(label)
       const value = element.replace('=', ' ')
-      for (const lens of lensesBox) {
-        for (let i = 0; i < lens.length; i++) {
-          if (lens[i].includes(label)) {
-            lens[i] = value
-            found = true
-          }
-        }
-      }
-      if (!found) {
-        if (lensesBox[futureIndexOfElement] !== undefined) {
-          lensesBox[futureIndexOfElement].push(value)
-        } else {
-          lensesBox[futureIndexOfElement] = [value]
-        }
+      const indexToUpdate = lensesBox[futureIndexOfElement].findIndex(
+        (el) => extractLabel(el) === label
+      )
+      if (indexToUpdate === -1) {
+        lensesBox[futureIndexOfElement].push(value)
+      } else {
+        lensesBox[futureIndexOfElement][indexToUpdate] = value
       }
     }
     if (element.includes('-')) {
       for (let rowIndex = 0; rowIndex < lensesBox.length; rowIndex++) {
-        for (let i = 0; i < lensesBox[rowIndex].length; i++) {
-          if (lensesBox[rowIndex][i].includes(label)) {
-            lensesBox[rowIndex].splice(i, 1)
-          }
+        const indexToRemove = lensesBox[rowIndex].findIndex(
+          (el) => extractLabel(el) === label
+        )
+        if (indexToRemove !== -1) {
+          lensesBox[rowIndex].splice(indexToRemove, 1)
         }
       }
     }

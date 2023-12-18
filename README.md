@@ -63,6 +63,7 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - First step was very straightforward to implement ... which freaks me out for part two ^^'
 - Since the other days don't inspire me, I decide to keep going !
 - [This article](https://dev.to/nickymeuleman/advent-of-code-2023-day-15-4h7c) helped me understand what was expected
+- 💡 [findIndex](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 ## Lessons learned
 - This advent of code was a great way to refresh my data structure knowledge (matrices, graph exploration), I'm definitely rusty.
 -
