@@ -9,7 +9,17 @@ const runHashAlgorithm = (str) => {
   return value
 }
 
-const resolvePuzzle = (fileInput) => {
-  return ''
+const getSumOfHashValues = (str) => {
+  const elements = str.split(',')
+  let sum = 0
+  for (const element of elements) {
+    sum += runHashAlgorithm(element)
+  }
+  return sum
 }
-module.exports = { resolvePuzzle, runHashAlgorithm }
+
+const resolvePuzzle = (fileInput) => {
+  const data = readFile(fileInput)[0]
+  return getSumOfHashValues(data)
+}
+module.exports = { resolvePuzzle, runHashAlgorithm, getSumOfHashValues }

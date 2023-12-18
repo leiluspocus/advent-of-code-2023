@@ -1,4 +1,8 @@
-const { resolvePuzzle, runHashAlgorithm } = require('./puzzle1')
+const {
+  resolvePuzzle,
+  runHashAlgorithm,
+  getSumOfHashValues,
+} = require('./puzzle1')
 
 test('run hash algorithm on sample', () => {
   expect(runHashAlgorithm('HASH')).toBe(52)
@@ -15,6 +19,12 @@ test('run hash algorithm on sample', () => {
   expect(runHashAlgorithm('ot=7')).toBe(231)
 })
 
+test('resolve one line', () => {
+  expect(
+    getSumOfHashValues('rn=1,cm-,qp=3,cm=2,qp-,pc=4,ot=9,ab=5,pc-,pc=6,ot=7')
+  ).toBe(1320)
+})
+
 test('resolve puzzle', () => {
-  expect(resolvePuzzle('/day15/sample.txt')).toStrictEqual('')
+  expect(resolvePuzzle('/day15/input.txt')).toBe(520500)
 })
