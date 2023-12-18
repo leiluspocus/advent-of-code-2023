@@ -21,7 +21,7 @@ const extractDigitValue = (str) => {
 
 const buildLensesBox = (str) => {
   const arr = str.split(',')
-  const lensesBox = []
+  const lensesBox = new Array(256).fill().map(() => [])
   for (const element of arr) {
     const label = extractLabel(element)
     if (element.includes('=')) {
@@ -29,12 +29,10 @@ const buildLensesBox = (str) => {
       const futureIndexOfElement = runHashAlgorithm(label)
       const value = element.replace('=', ' ')
       for (const lens of lensesBox) {
-        if (lens !== undefined) {
-          for (let i = 0; i < lens.length; i++) {
-            if (lens[i].includes(label)) {
-              lens[i] = value
-              found = true
-            }
+        for (let i = 0; i < lens.length; i++) {
+          if (lens[i].includes(label)) {
+            lens[i] = value
+            found = true
           }
         }
       }
@@ -48,14 +46,9 @@ const buildLensesBox = (str) => {
     }
     if (element.includes('-')) {
       for (let rowIndex = 0; rowIndex < lensesBox.length; rowIndex++) {
-        if (lensesBox[rowIndex] !== undefined) {
-          for (let i = 0; i < lensesBox[rowIndex].length; i++) {
-            if (lensesBox[rowIndex][i].includes(label)) {
-              lensesBox[rowIndex].splice(i, 1)
-            }
-          }
-          if (lensesBox[rowIndex].length === 0) {
-            lensesBox.splice(rowIndex, 1)
+        for (let i = 0; i < lensesBox[rowIndex].length; i++) {
+          if (lensesBox[rowIndex][i].includes(label)) {
+            lensesBox[rowIndex].splice(i, 1)
           }
         }
       }
@@ -67,11 +60,9 @@ const buildLensesBox = (str) => {
 const resolveFocusingPowerOfLens = (lensesBox) => {
   let total = 0
   for (let i = 0; i < lensesBox.length; i++) {
-    if (lensesBox[i] !== undefined) {
-      for (let j = 0; j < lensesBox[i].length; j++) {
-        // i represents box #ID, j represents slot id
-        total = total + (i + 1) * (j + 1) * extractDigitValue(lensesBox[i][j])
-      }
+    for (let j = 0; j < lensesBox[i].length; j++) {
+      // i represents box #ID, j represents slot id
+      total = total + (i + 1) * (j + 1) * extractDigitValue(lensesBox[i][j])
     }
   }
   return total
