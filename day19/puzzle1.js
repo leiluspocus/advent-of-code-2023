@@ -34,6 +34,86 @@ const parseParts = (str) => {
   return obj
 }
 
-const resolvePuzzle = (fileInput) => {}
+const separateWorkflowParts = (fileContent) => {
+  const dataWorkflow = []
+  const dataParts = []
+  for (const line of fileContent) {
+    if (!line.startsWith('{') && line !== '') {
+      dataWorkflow.push(line)
+    } else {
+      if (line !== '') dataParts.push(line)
+    }
+  }
+  return [dataWorkflow, dataParts]
+}
+
+const computeIfPartAccepted = (
+  workflowMap,
+  rules,
+  fallback,
+  parsedPart,
+  finalResult = null
+) => {
+  const { x, m, a, s } = parsedPart
+  while (finalResult === null) {
+    for (const rule of rules) {
+      const [condition, goToStep] = rule.split(':')
+      if (eval(condition)) {
+        if (goToStep === 'A' || goToStep === 'R') {
+          finalResult = goToStep
+          return finalResult
+        } else {
+          rules = workflowMap.get(goToStep).rules
+          return computeIfPartAccepted(
+            workflowMap,
+            workflowMap.get(goToStep).rules,
+            workflowMap.get(goToStep).fallback,
+            parsedPart,
+            finalResult
+          )
+        }
+      }
+    }
+    if (finalResult === null) {
+      if (fallback === 'A' || fallback === 'R') {
+        return fallback
+      }
+      return computeIfPartAccepted(
+        workflowMap,
+        workflowMap.get(fallback).rules,
+        workflowMap.get(fallback).fallback,
+        parsedPart,
+        finalResult
+      )
+    }
+  }
+  return finalResult
+}
+
+const resolvePuzzle = (fileInput) => {
+  const file = readFile(fileInput)
+  const [dataWorkflow, dataParts] = separateWorkflowParts(file)
+  let sum = 0
+
+  // Build workflow map
+  const workflowMap = buildWorkflowMap(dataWorkflow)
+
+  for (const part of dataParts) {
+    const parsedPart = parseParts(part)
+    const rules = workflowMap.get('in').rules
+    const fallback = workflowMap.get('in').fallback
+    const finalResult = computeIfPartAccepted(
+      workflowMap,
+      rules,
+      fallback,
+      parsedPart
+    )
+    if (finalResult === 'A') {
+      const { x, m, a, s } = parsedPart
+      sum = sum + x + m + a + s
+    }
+  }
+  return sum
+}
 
 module.exports = { parseWorkflow, parseParts, resolvePuzzle, buildWorkflowMap }

@@ -30,3 +30,11 @@ test('parse parts', () => {
     s: 2876,
   })
 })
+
+test('resolve sample', () => {
+  expect(resolvePuzzle('/day19/sample.txt')).toBe(19114)
+})
+
+test('resolve puzzle', () => {
+  expect(resolvePuzzle('/day19/input.txt')).toBe(480738)
+})
