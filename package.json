@@ -1,7 +1,12 @@
 {
   "type": "module",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
   },
   "dependencies": {
     "jest": "^29.7.0"
