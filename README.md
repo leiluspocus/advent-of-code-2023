@@ -62,7 +62,21 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 ## Day 15
 - First step was very straightforward to implement ... which freaks me out for part two ^^'
 - Since the other days don't inspire me, I decide to keep going !
-- [This article](https://dev.to/nickymeuleman/advent-of-code-2023-day-15-4h7c) helped me understand what was expected
+- [This article](https://dev.to/nickymeuleman/advent-of-code-2023-day-15-4h7c) helped me understand what was expected for part 2. Here's the extract that helped me
+> Now, the specifics of both instructions.
+>
+> ➖ The remove instruction:
+>
+> If the label you are searching for is not inside its box, do nothing.
+> If the label you are searching for is present, remove it and shift all other lenses forward.
+>
+>
+> ➕ The add instruction:
+>
+> If a lens with the label you are searching for is present, update its focal length (the number right of the = in the instruction).
+> If a lens with the label you are searching for is not present, add the lens to the end of the box.
+>
+>
 - 💡 [findIndex](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 
 
