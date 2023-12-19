@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
     "coverage": "jest --coverage"
   },
   "jest": {
