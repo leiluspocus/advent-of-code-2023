@@ -79,6 +79,8 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 >
 - 💡 [findIndex](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 
+## Day 19
+- I feel like I'm rambling but I had a hard time understanding what's expected.
 
 ## Lessons learned
 - This advent of code was a great way to refresh my data structure knowledge (matrices exploration), I'm definitely rusty.
