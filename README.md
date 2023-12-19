@@ -1,6 +1,6 @@
 # advent-of-code-2023
 
-![example workflow](https://github.com/leiluspocus/advent-of-code-2023/actions/workflows/workflow_tests_coverage.yml/badge.svg)
+![advent of code test coverage workflow](https://github.com/leiluspocus/advent-of-code-2023/actions/workflows/workflow_tests_coverage.yml/badge.svg)
 
 🧪 [View test coverage](https://leiluspocus.github.io/advent-of-code-2023/)
 
