@@ -1,6 +1,11 @@
 # advent-of-code-2023
+
+![example workflow](https://github.com/github/docs/actions/workflows/workflow_tests_coverage.yml/badge.svg)
+
 Advent of Code 2023 🎅 (TDD + Node.js) - Will I complete it this year ? 🔮
 
+
+🧪 [View test coverage](https://leiluspocus.github.io/advent-of-code-2023/)
 ## Day 1
 
 What a rollercoaster of emotions ! 🎢
