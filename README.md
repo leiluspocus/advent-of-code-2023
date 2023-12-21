@@ -98,3 +98,4 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 ## Lessons learned
 - This advent of code was a great way to refresh my data structure knowledge (matrices exploration), I'm definitely rusty.
 - `Array` provides a lot of handy functions (`findIndex`, `fill` ...) that I don't use that often !
+- Avoid complex solutions : in simplicity we trust!
