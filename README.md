@@ -89,6 +89,12 @@ From "Easy peasy, lemon squeezie 😎" to "I hate Christmas 🤬, I hate myself 
 - I feel like I'm rambling but I had a hard time understanding what's expected.
 - I manipulated the Map type in Javascript, pretty convenient.
 - Recursivity can be helpful! (even though my method `computeIfPartAccepted` is ugly 😳)
+
+
+## Day 21 ❌
+- I'm glad I had my `buildMatrix` function ready to use in my helpers !
+- Struggling with recursivity: I wanted to do multiple things in the same time (explore and count possible steps), I decided to separate things and mark the possible plots in the matrix, THEN count the plots.
+- Difficulties understanding when is a plot considered like "reachable" after the second step. Some . switch to O, other don't... 🔮 I'm currently stuck on this problem.
 ## Lessons learned
 - This advent of code was a great way to refresh my data structure knowledge (matrices exploration), I'm definitely rusty.
 - `Array` provides a lot of handy functions (`findIndex`, `fill` ...) that I don't use that often !

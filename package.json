@@ -2,6 +2,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
+    "test-watch": "jest --watchAll",
     "coverage": "jest --coverage"
   },
   "jest": {
