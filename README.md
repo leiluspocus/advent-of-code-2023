@@ -6,7 +6,7 @@
 
 _____
 
-Advent of Code 2023 🎅 (TDD + Node.js) - Will I complete it this year ? 🔮
+Advent of Code 2023 🎅 (TDD + Node.js) - Will I complete it this year? 🔮
 ## Day 1
 
 What a rollercoaster of emotions ! 🎢
